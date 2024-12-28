@@ -1,0 +1,268 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 30px;
+  font-size: 16px;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+h1 {
+  font-size: 3rem;
+  color: #3f51b5;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+  width: 250px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #303f9f;
+}
+
+/* Form Container for Adding Stock */
+.form-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+form input {
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+form input:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+form button {
+  background-color: #3f51b5;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #303f9f;
+}
+
+/* Stock List */
+.stock-list {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.stock-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.stock-list li {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stock-list li:hover {
+  background-color: #e8f0fe;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stock-list li span {
+  font-weight: 600;
+  color: #333;
+}
+
+button.edit-btn, button.delete-btn {
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button.edit-btn {
+  background-color: #ff9800;
+}
+
+button.edit-btn:hover {
+  background-color: #f57c00;
+}
+
+button.delete-btn {
+  background-color: #ff5722;
+}
+
+button.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Error and Loading Messages */
+.loading, .error {
+  text-align: center;
+  color: #ff5722;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+.no-stocks {
+  text-align: center;
+  color: #757575;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Search Results */
+.search-results {
+  background-color: #e8f0fe;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-results li {
+  margin-bottom: 10px;
+}
+
+.search-results li span {
+  font-weight: bold;
+  color: #3f51b5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+
+  input[type="text"], input[type="number"], button {
+    width: 100%;
+  }
+
+  .stock-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stock-list li button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+/* Success Message */
+.success {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.success.fade-out {
+  opacity: 0;
+}
+
+/* Ensure it's removed from the DOM after fade-out */
+.success.hidden {
+  display: none;
+}
+/* Success Message */
+.success {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
