@@ -1,5 +1,5 @@
 // src/api.js
-const API_BASE = 'http://localhost:8080/api/stocks';
+const API_BASE = 'portfoliobackend.railway.internal/api/stocks';
 
 // Fetch all stocks
 export const fetchStocks = async () => {
