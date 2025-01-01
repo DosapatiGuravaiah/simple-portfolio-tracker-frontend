@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+1.# Portfolio Tracker Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend of the **Portfolio Tracker** application, built using React. It allows users to interact with their stock portfolio, view key portfolio metrics, and manage stock holdings.
 
-## Available Scripts
+## Features
+- View the **dashboard** showing portfolio metrics like total value and top-performing stock.
+- **Add, edit, and delete** stock holdings.
+- Display a **list of current stock holdings** with stock details (e.g., stock name, ticker, quantity, buy price).
+- Track portfolio value based on **real-time stock prices**.
 
-In the project directory, you can run:
+## Prerequisites
+Ensure you have the following installed:
+- **Node.js** - To run and build the React application.
+- **npm** or **yarn** (npm comes with Node.js by default).
 
-### `npm start`
+## Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/portfolio-tracker-frontend.git
+cd portfolio-tracker-frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+2.  Install dependencies:
+npm install
+or if you're using yarn:yarn install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Run the development server:
+npm start
+or if you're using yarn:
+yarn start
+The frontend will be accessible at  http://localhost:3000 in your browser.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. API Integration:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.The frontend interacts with the backend API for CRUD operations on stock holdings.
+2.Ensure the backend server is running and accessible.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Build the application for production:
+npm run build
+This will create a production-ready build in the build folder.
 
-### `npm run eject`
+6.UI Design:
+Responsive design: The app is designed to be responsive and should work on both desktop and mobile devices
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7.Deployment:
+Deployed Frontend Link: https://simpleportfoliotracker.netlify.app/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+8.Assumptions & Limitations
+The portfolio initially includes 5 random stocks, each with a quantity of 1.
+The real-time stock prices are fetched from a third-party stock price API (e.g., Alpha Vantage, Yahoo Finance, or Finnhub).
+There may be a rate limit on stock price updates based on the API used.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+9.API Endpoints:
+The frontend communicates with the following backend endpoints:
+GET /stocks: Fetch all stocks in the portfolio.
+POST /stocks: Add a new stock.
+PUT /stocks/{id}: Update stock details.
+DELETE /stocks/{id}: Remove a stock from the portfolio.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
